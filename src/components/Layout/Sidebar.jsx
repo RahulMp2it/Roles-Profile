@@ -1,48 +1,52 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaCalendar } from "react-icons/fa";
-import { IoPersonSharp } from "react-icons/io5";
+import { BsCalendar2Fill } from "react-icons/bs";
+import { FaUserFriends } from "react-icons/fa";
 import { RxDashboard } from "react-icons/rx";
+import { TbStack2Filled } from "react-icons/tb";
+import { PiChatsCircleFill } from "react-icons/pi";
+import '@fontsource/nunito-sans/500.css';
+
 
 function Sidebar() {
   return (
     <div className="flex min-h-screen">
       {/* sideBar */}
-      <div className="bg-white text-white w-60 space-y-2 py-7 px-2 m-3 rounded-2xl">
+      <div className="bg-white text-white w-[175px] space-y-2 py-3 px-3 my-3 mx-6 rounded-2xl">
         <Link to={"/"}>
-          <div className="bg-[#3F8CFF] w-14 rounded-xl ml-5">
+          <div className="bg-[#3F8CFF] w-10 rounded-[8px] ">
             <img src="mprw logo-01 1.png" alt="Logo" />
           </div>
         </Link>
-
-        <div className="text-gray-600 m-0 pt-2">
+       
+        <div className="text-[#7D8592] text-[14px] tracking-[0.5px] font-nunito m-0 pt-2">
           <Link to={"/"}>
-            <div className="flex py-3 px-4 rounded transition duration-200 hover:bg-gray-700 items-center gap-x-2">
-              <IoPersonSharp />
+            <div className="flex py-2 px-2 rounded transition duration-200 hover:bg-[#F4F9FD] items-center gap-x-4">
+              <FaUserFriends />
               <span>Employees</span>
             </div>
           </Link>
           <Link to={"/"}>
-            <div className="flex py-3 px-4 rounded transition duration-200 hover:bg-gray-700 items-center gap-x-2">
-              <FaCalendar />
+            <div className="flex py-2 px-2 rounded transition duration-200 hover:bg-[#F4F9FD] items-center gap-x-4">
+              <BsCalendar2Fill />
               <span>Profile</span>
             </div>
           </Link>
           <Link to={"/"}>
-            <div className="flex py-3 px-4 rounded transition duration-200 hover:bg-gray-700 items-center gap-x-2">
+            <div className="flex py-2 px-2 rounded transition duration-200 hover:bg-[#F4F9FD] items-center gap-x-4">
               <RxDashboard />
               <span>Department</span>
             </div>
           </Link>
           <Link to={"/"}>
-            <div className="flex py-3 px-4 rounded transition duration-200 hover:bg-gray-700 items-center gap-x-2">
-              <RxDashboard />
+            <div className="flex py-2 px-2 rounded transition duration-200 hover:bg-[#F4F9FD] items-center gap-x-4">
+              <TbStack2Filled />
               <span>Designation</span>
             </div>
           </Link>
           <Link to={"/"}>
-            <div className="flex py-3 px-4 rounded transition duration-200 hover:bg-gray-700 items-center gap-x-2">
-              <RxDashboard />
+            <div className="flex py-2 px-2 rounded transition duration-200 hover:bg-[#F4F9FD] items-center gap-x-4">
+              <PiChatsCircleFill />
               <span>Profile Assign</span>
             </div>
           </Link>
