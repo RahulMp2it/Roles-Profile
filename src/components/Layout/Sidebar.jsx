@@ -5,8 +5,7 @@ import { FaUserFriends } from "react-icons/fa";
 import { RxDashboard } from "react-icons/rx";
 import { TbStack2Filled } from "react-icons/tb";
 import { PiChatsCircleFill } from "react-icons/pi";
-import '@fontsource/nunito-sans/500.css';
-
+import "@fontsource/nunito-sans/500.css";
 
 function Sidebar() {
   return (
@@ -18,7 +17,7 @@ function Sidebar() {
             <img src="mprw logo-01 1.png" alt="Logo" />
           </div>
         </Link>
-       
+
         <div className="text-[#7D8592] text-[14px] tracking-[0.5px] font-nunito m-0 pt-2">
           <Link to={"/"}>
             <div className="flex py-2 px-2 rounded transition duration-200 hover:bg-[#F4F9FD] items-center gap-x-4">
@@ -48,6 +47,13 @@ function Sidebar() {
             <div className="flex py-2 px-2 rounded transition duration-200 hover:bg-[#F4F9FD] items-center gap-x-4">
               <PiChatsCircleFill />
               <span>Profile Assign</span>
+            </div>
+          </Link>
+
+          <Link to={"/"}>
+            <div className="flex bottom-0 py-2 px-2 rounded transition duration-200 hover:bg-[#F4F9FD] items-center gap-x-4">
+              <PiChatsCircleFill />
+              <span>Logout</span>
             </div>
           </Link>
         </div>

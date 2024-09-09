@@ -4,44 +4,71 @@ import { FiSearch } from "react-icons/fi";
 
 function Navbar() {
   return (
-    <nav className="navbar fixed top-0 grid grid-cols-12 gap-x-5 me-2 ms-[215px]  w-[83%] " >
-
+    <nav className="navbar fixed top-0 grid grid-cols-12 gap-x-5 me-2 ms-[215px]  w-[83%] ">
       {/* Search Bar */}
       <div className="search-bar col-span-9 relative ">
-      {/* <FiSearch /> */}
-        <input type="text" className="w-full rounded-[8px] pl-9 pr-3 py-1.5 border-0" placeholder="Search" />
+        {/* <FiSearch /> */}
+        <input
+          type="text"
+          className="w-full rounded-[8px] pl-9 pr-3 py-1.5 border-0"
+          placeholder="Search"
+        />
         <span className="absolute left-2 top-1/2 transform -translate-y-1/2 text-black-900">
           <FiSearch />
         </span>
       </div>
 
-
       {/* Notification  */}
       <div className="user-controls col-span-1 py-1.5 bg-white px-2 rounded-[8px] ">
-        <button className="notification-btn w-full flex justify-center"><IoMdNotificationsOutline className="w-5 h-5" /> </button>
+        <button className="notification-btn w-full flex justify-center">
+          <IoMdNotificationsOutline className="w-5 h-5" />{" "}
+        </button>
       </div>
 
-      <div className="col-span-2">
-        <div className="dropdown dropdown-end w-full">
-          <div tabIndex={0} role="button" className="btn btn-ghost rounded-btn flex justify-center items-center ">
+      <div className="col-span-2 ">
+        <div className="relative inline-block text-left group ">
+          {/* Dropdown button with arrow  */}
+          <button class="bg-white text-black text-[14px] font-nunito px-4 py-1.5 rounded-md shadow-md focus:outline-none flex items-center">
             {/* image */}
             <div class="avatar">
-              <div class="w-5 rounded-full">
+              <div class="w-6 mr-2 rounded-full">
                 <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
               </div>
             </div>
-            <span>Rahul Singh</span>
+            Rahul Singh
+            {/* Down arrow icon */}
+            <svg
+              class="ml-4 w-4 h-4 fill-current text-black"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+            >
+              <path d="M6.293 7.293a1 1 0 011.414 0L10 8.586l2.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" />
+            </svg>
+          </button>
+
+          {/* Dropdown menu  */}
+          <div class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 pointer-events-none transition-opacity duration-300 group-hover:opacity-100 group-hover:pointer-events-auto">
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            >
+              Option 1
+            </a>
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            >
+              Option 2
+            </a>
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+            >
+              Option 3
+            </a>
           </div>
-          <ul
-            tabIndex={0}
-            className="menu dropdown-content bg-base-100 rounded-box z-[1] mt-4 w-52 p-2 shadow">
-            <li><a>Item 1</a></li>
-            <li><a>Item 2</a></li>
-          </ul>
         </div>
       </div>
-
-
     </nav>
   );
 }
