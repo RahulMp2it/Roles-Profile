@@ -9,9 +9,9 @@ import "@fontsource/nunito-sans/500.css";
 
 function Sidebar() {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen ">
       {/* sideBar */}
-      <div className="bg-white text-white w-[175px] space-y-2 py-3 px-3 my-3 mx-6 rounded-2xl">
+      <div className="bg-white text-white w-[175px] space-y-2 py-3 px-3 my-3 mx-6 rounded-2xl border border-red-500">
         <Link to={"/"}>
           <div className="bg-[#3F8CFF] w-10 rounded-[8px] ">
             <img src="mprw logo-01 1.png" alt="Logo" />
@@ -51,7 +51,7 @@ function Sidebar() {
           </Link>
 
           <Link to={"/"}>
-            <div className="flex bottom-0 py-2 px-2 rounded transition duration-200 hover:bg-[#F4F9FD] items-center gap-x-4">
+            <div className="flex bottom-2 py-2 px-2 rounded transition duration-200 hover:bg-[#F4F9FD] items-center gap-x-4">
               <PiChatsCircleFill />
               <span>Logout</span>
             </div>
