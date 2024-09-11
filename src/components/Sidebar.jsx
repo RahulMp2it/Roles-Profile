@@ -11,7 +11,7 @@ function Sidebar() {
   return (
     <div className="flex min-h-screen ">
       {/* sideBar */}
-      <div className="bg-white text-white w-[175px] space-y-2 py-3 px-3 my-3 mx-6 rounded-2xl border border-red-500">
+      <div className="bg-white text-white w-[175px] space-y-2 py-3 px-3 my-3 mx-6 rounded-2xl">
         <Link to={"/"}>
           <div className="bg-[#3F8CFF] w-10 rounded-[8px] ">
             <img src="mprw logo-01 1.png" alt="Logo" />
