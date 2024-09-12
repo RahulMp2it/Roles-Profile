@@ -5,7 +5,7 @@ import Department from "./Pages/Department";
 function Main() {
   return (
     <>
-      <div className="fixed top-14 me-3 ms-[215px] pt-5 pb-16 w-[85%] p-2 overflow-y-auto h-screen">
+      <div className="mainsec fixed top-14 me-3 ms-[215px] pt-5 pb-16 w-[84%] p-2 overflow-y-auto h-screen">
         <p className="text-[#7D8592] text-[14px] tracking-wide mb-0">
           Welcome back, Rahul singh{" "}
         </p>

@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap'); */
+
 
 body{
     background-color: #F4F9FD;
@@ -13,3 +13,25 @@ body{
     padding: 0;
     margin: 0;
 }
+
+@layer mainsec {
+ 
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+  
+    ::-webkit-scrollbar-track {
+        background: #111;
+    }
+  
+    ::-webkit-scrollbar-thumb {
+        background: #171717;
+        border-radius: 10px;
+    }
+  
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+  
+  }
+  
