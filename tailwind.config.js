@@ -10,6 +10,9 @@ export default {
       fontFamily: {
         nunito: [' "Nunito Sans", sans-serif'],
       },
+      backgroundImage: {
+        'progress-img': 'url("progress.png")',
+      }
     },
   },
   plugins: [

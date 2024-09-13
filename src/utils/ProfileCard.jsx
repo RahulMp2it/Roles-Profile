@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = ({ image, title, buttonText }) => {
+const ProfileCard = ({ image, depart, position, title, buttonText }) => {
   return (
     <div className="bg-[#F4F9FD] rounded-[22px] overflow-hidden flex flex-col items-center justify-center pt-6 pb-2">
       <div className="relative w-[75px] h-[75px] bg-progress-img bg-center bg-[length:100%_100%] justify-center ">
@@ -11,6 +11,12 @@ const Card = ({ image, title, buttonText }) => {
           alt={title}
         />
       </div>
+      <p className="mb-1 text-[16px] leading-4 py-3 flex justify-center text-center font-nunito text-[#0A16299E] dark:text-white h-[20px]">
+        {position}
+      </p>
+      <p className="mb-1 text-[16px] leading-4 py-3 flex justify-center text-center font-nunito text-[#0A1629D6] dark:text-white h-[20px]">
+        {depart}
+      </p>
       {/* Title and Button */}
       <h2 className="mb-1 text-[16px] leading-4 py-3 flex justify-center text-center font-nunito text-[#0A1629] dark:text-white h-[40px]">
         {title}
@@ -24,4 +30,4 @@ const Card = ({ image, title, buttonText }) => {
   );
 };
 
-export default Card;
+export default ProfileCard;

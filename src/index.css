@@ -14,10 +14,11 @@ body{
     margin: 0;
 }
 
-@layer mainsec {
+@layer base {
  
-    ::-webkit-scrollbar {
+   .mainsec::-webkit-scrollbar {
         width: 0px;
+        display: none;
     }
   
     ::-webkit-scrollbar-track {
@@ -33,5 +34,9 @@ body{
         background: #555;
     }
   
+    .mainsec::-webkit-scrollbar {
+        width: 0px;
+        display: none;
+    }
   }
   
