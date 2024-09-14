@@ -1,7 +1,7 @@
 import React from "react";
-import ProfileCard from "../../../utils/ProfileCard";
+import ProfileAssignCard from "../../../utils/ProfileAssignCard";
 
-const profiles = [
+const profileAssigns = [
   {
     id: 1,
     name: "UI/UX Designer",
@@ -74,16 +74,16 @@ const profiles = [
   },
 ];
 
-function Profile() {
+function ProfileAssign() {
   return (
     <div className="max-w-[1400px] mt-3 px-24 py-8 mx-auto grid lg:grid-cols-4 rounded-[20px] gap-24 bg-white">
-      {profiles.map((profile) => (
-        <ProfileCard
-          key={profile.id}
-          image={profile.image}
-          title={profile.name}
-          depart={profile.depart}
-          position={profile.position}
+      {profileAssigns.map((profileassign) => (
+        <ProfileAssignCard
+          key={profileassign.id}
+          image={profileassign.image}
+          title={profileassign.name}
+          depart={profileassign.depart}
+          position={profileassign.position}
           buttonText="1 Member"
         />
       ))}
@@ -91,4 +91,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default ProfileAssign;

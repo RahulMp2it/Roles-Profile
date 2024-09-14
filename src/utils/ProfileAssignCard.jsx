@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProfileCard = ({ image, depart, position, title, buttonText }) => {
+function ProfileAssignCard({ image, depart, position, title, buttonText }) {
   return (
     <div className="bg-[#F4F9FD] rounded-[22px] overflow-hidden flex flex-col items-center justify-center pt-6 pb-2">
       <div className="relative w-[75px] h-[75px] bg-progress-img bg-center bg-[length:100%_100%] justify-center ">
@@ -28,6 +28,6 @@ const ProfileCard = ({ image, depart, position, title, buttonText }) => {
       </div>
     </div>
   );
-};
+}
 
-export default ProfileCard;
+export default ProfileAssignCard;

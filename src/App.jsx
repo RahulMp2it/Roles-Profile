@@ -3,6 +3,9 @@ import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Department from "./components/Pages/Department/Department";
 import Profile from "./components/Pages/Profile/Profile";
+import Designation from "./components/Pages/Designation/Designation";
+import ProfileAssign from "./components/Pages/ProfileAssign/ProfileAssign";
+import Employees from "./components/Pages/Employees/Employees";
 
 function App() {
   return (
@@ -29,8 +32,11 @@ function App() {
           {/* <Department /> */}
           <Routes>
             <Route path="/" element={<Department />} />
+            <Route path="/Employees" element={<Employees />} />
             <Route path="/department" element={<Department />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/designation" element={<Designation />} />
+            <Route path="/profileAssign" element={<ProfileAssign />} />
           </Routes>
         </div>
       </div>

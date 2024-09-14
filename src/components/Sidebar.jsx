@@ -21,7 +21,7 @@ function Sidebar() {
           </div>
 
           <div className="text-[#7D8592] text-[14px] tracking-[0.5px] font-nunito m-0 pt-2">
-            <Link to={"/"}>
+            <Link to={"/Employees"}>
               <div className="flex py-3 px-2 rounded transition duration-200 hover:bg-[#F4F9FD] items-center gap-x-4">
                 <FaUserFriends className="size-5" />
                 <span>Employees</span>
@@ -39,13 +39,13 @@ function Sidebar() {
                 <span>Department</span>
               </div>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/Designation"}>
               <div className="flex py-3 px-2 rounded transition duration-200 hover:bg-[#F4F9FD] items-center gap-x-4">
                 <TbStack2Filled className="size-5" />
                 <span>Designation</span>
               </div>
             </Link>
-            <Link to={"/"}>
+            <Link to={"/ProfileAssign"}>
               <div className="flex py-3 px-2 rounded transition duration-200 hover:bg-[#F4F9FD] items-center gap-x-4">
                 <PiChatsCircleFill className="size-5" />
                 <span>Profile Assign</span>
