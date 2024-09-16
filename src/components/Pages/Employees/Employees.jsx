@@ -5,6 +5,7 @@ const employees = [
   {
     id: 1,
     name: "UI/UX Designer",
+    fname: "Rahul singh",
     image: "image.png",
     depart: "Marketing Department",
     position: "Executive",
@@ -12,6 +13,7 @@ const employees = [
   {
     id: 2,
     name: "UI/UX Designer",
+    fname: "Rahul singh",
     image: "image1.png",
     depart: "Marketing Department",
     position: "Executive",
@@ -19,6 +21,7 @@ const employees = [
   {
     id: 3,
     name: "UI/UX Designer",
+    fname: "Rahul singh",
     image: "image7.png",
     depart: "Marketing Department",
     position: "Executive",
@@ -26,6 +29,7 @@ const employees = [
   {
     id: 4,
     name: "UI/UX Designer",
+    fname: "Rahul singh",
     image: "image3.png",
     depart: "Marketing Department",
     position: "Executive",
@@ -33,6 +37,7 @@ const employees = [
   {
     id: 5,
     name: "UI/UX Designer",
+    fname: "Rahul singh",
     image: "image4.png",
     depart: "Marketing Department",
     position: "Executive",
@@ -40,6 +45,7 @@ const employees = [
   {
     id: 6,
     name: "UI/UX Designer",
+    fname: "Rahul singh",
     image: "image5.png",
     depart: "Marketing Department",
     position: "Executive",
@@ -47,6 +53,7 @@ const employees = [
   {
     id: 7,
     name: "UI/UX Designer",
+    fname: "Rahul singh",
     image: "image.png",
     depart: "Marketing Department",
     position: "Executive",
@@ -54,6 +61,7 @@ const employees = [
   {
     id: 8,
     name: "UI/UX Designer",
+    fname: "Rahul singh",
     image: "image8.png",
     depart: "Marketing Department",
     position: "Executive",
@@ -61,6 +69,7 @@ const employees = [
   {
     id: 9,
     name: "UI/UX Designer",
+    fname: "Rahul singh",
     image: "image1.png",
     depart: "Marketing Department",
     position: "Executive",
@@ -68,6 +77,7 @@ const employees = [
   {
     id: 10,
     name: "UI/UX Designer",
+    fname: "Rahul singh",
     image: "image4.png",
     depart: "Marketing Department",
     position: "Executive",
@@ -81,6 +91,7 @@ function Employees() {
         <EmployeesCard
           key={employee.id}
           image={employee.image}
+          fname={employee.fname}
           title={employee.name}
           depart={employee.depart}
           position={employee.position}

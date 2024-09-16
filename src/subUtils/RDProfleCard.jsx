@@ -1,13 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
-const Card = ({ image, title, buttonText, url }) => {
-  const navigate = useNavigate();
-
-  const handleClick = (u) => {
-    navigate(u);
-  };
-
+function RDProfleCard({ image, title, buttonText }) {
   return (
     <div className="bg-[#F4F9FD] rounded-[22px] overflow-hidden flex flex-col items-center justify-center pt-6 pb-2">
       <div className="relative w-[75px] h-[75px] bg-progress-img bg-center bg-[length:100%_100%] justify-center ">
@@ -23,15 +16,12 @@ const Card = ({ image, title, buttonText, url }) => {
         {title}
       </h2>
       <div className="p-4 text-center">
-        <button
-          onClick={() => handleClick(url)}
-          className="inline-flex items-center border  border-[#8f97a3] px-4 py-1 text-[11px] font-nunito  text-[#7D8592] bg-[#F4F9FD] rounded-[3.5px] focus:outline-none"
-        >
+        <button className="inline-flex items-center border  border-[#8f97a3] px-4 py-1 text-[11px] font-nunito  text-[#7D8592] bg-[#F4F9FD] rounded-[3.5px] focus:outline-none">
           {buttonText}
         </button>
       </div>
     </div>
   );
-};
+}
 
-export default Card;
+export default RDProfleCard;

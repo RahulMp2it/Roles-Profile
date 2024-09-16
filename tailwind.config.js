@@ -12,13 +12,29 @@ export default {
       },
       backgroundImage: {
         'progress-img': 'url("progress.png")',
-      }
+      },
+      boxShadow: {
+        'custom-blue': '0px 4px 14px 0px #3F8CFF63', 
+      },
     },
   },
   plugins: [
     require('daisyui'),
     // require('preline/plugin'),
     require('flowbite/plugin'),
+
+    function ({addUtilities}) {
+      const newUtilities = {
+          '.no-scrollbar::-webkit': {
+            display: "none",
+          },
+          '.no-scrollbar':{
+            '-ms-overflow-style':'none',
+            "scrollbar-width":"none",
+          }
+      }
+      addUtilities(newUtilities)
+    }
   ],
 }
 

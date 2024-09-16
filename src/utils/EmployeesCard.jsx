@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function EmployeesCard({ image, depart, position, title, buttonText }) {
+function EmployeesCard({ image, depart, position, title, fname }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   // Toggle dropdown visibility
@@ -12,11 +12,14 @@ function EmployeesCard({ image, depart, position, title, buttonText }) {
     <div className="bg-[#F4F9FD] rounded-[22px] overflow-hidden flex flex-col items-center justify-center pt-6 pb-2 relative">
       {/* Checkbox - Top Left Corner */}
       <div className="absolute top-2 left-2">
-        <input type="checkbox" className="w-4 h-4" />
+        <input
+          type="checkbox"
+          className="w-7 h-7 shadow-custom-blue border-inherit rounded-md"
+        />
       </div>
 
-      {/* Dropdown Icon (Using an image) - Top Right Corner */}
-      <div className="absolute top-2 right-2">
+      {/* Dropdown Icon */}
+      <div className="absolute top-2 right-3">
         <button
           onClick={toggleDropdown}
           className="focus:outline-none text-gray-600"
@@ -24,7 +27,7 @@ function EmployeesCard({ image, depart, position, title, buttonText }) {
           <img
             src="dropicone.png" // Use any image passed as a prop for the dropdown icon
             alt="dropdown"
-            className="w-4 h-4"
+            className="w-7 h-7"
           />
         </button>
 
@@ -71,18 +74,23 @@ function EmployeesCard({ image, depart, position, title, buttonText }) {
         />
       </div>
 
+      {/* Full name */}
+      <p className="mb-1 text-[16px] leading-4 py-2 flex justify-center text-center font-nunito text-[#0A1629] dark:text-white h-[18px]">
+        {fname}
+      </p>
+
       {/* Position */}
-      <p className="mb-1 text-[16px] leading-4 py-2 flex justify-center text-center font-nunito text-[#0A16299E] dark:text-white h-[18px]">
+      <p className="mb-1 text-[16px] leading-4 py-2 flex justify-center text-center font-nunito text-[#3F8CFF] dark:text-white h-[18px]">
         {position}
       </p>
 
       {/* Department */}
-      <p className="mb-1 text-[13px] leading-4 py-2 flex justify-center text-center font-nunito text-[#0A1629D6] dark:text-white h-[18px]">
+      <p className="mb-1 text-[16px] leading-4 py-2 flex justify-center text-center font-nunito text-[#0A1629D6] dark:text-white h-[18px]">
         {depart}
       </p>
 
       {/* Title */}
-      <h2 className="mb-1 text-[16px] leading-4 py-2 flex justify-center text-center font-nunito text-[#0A1629] dark:text-white h-[18px]">
+      <h2 className="mb-1 text-[15px] leading-4 py-2 flex justify-center text-center font-nunito text-[#0A1629] dark:text-white h-[18px]">
         {title}
       </h2>
     </div>
