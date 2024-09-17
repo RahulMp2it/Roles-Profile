@@ -1,4 +1,9 @@
 import React, { useState } from "react";
+import { IoPencil } from "react-icons/io5";
+import { IoEyeOutline } from "react-icons/io5";
+import { GoPlus } from "react-icons/go";
+import { MdDelete } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function EmployeesCard({ image, depart, position, title, fname }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -9,7 +14,7 @@ function EmployeesCard({ image, depart, position, title, fname }) {
   };
 
   return (
-    <div className="bg-[#F4F9FD] rounded-[22px] overflow-hidden flex flex-col items-center justify-center pt-6 pb-2 relative">
+    <div className="bg-[#F4F9FD] rounded-[22px] overflow-hidden flex flex-col items-center justify-center pt-6 pb-5 relative">
       {/* Checkbox - Top Left Corner */}
       <div className="absolute top-2 left-2">
         <input
@@ -19,7 +24,7 @@ function EmployeesCard({ image, depart, position, title, fname }) {
       </div>
 
       {/* Dropdown Icon */}
-      <div className="absolute top-2 right-3">
+      <div className="absolute top-2 right-3 z-10">
         <button
           onClick={toggleDropdown}
           className="focus:outline-none text-gray-600"
@@ -33,33 +38,41 @@ function EmployeesCard({ image, depart, position, title, fname }) {
 
         {/* Dropdown Menu */}
         {isDropdownOpen && (
-          <div className="absolute right-0 mt-2 w-28 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-            <ul className="py-1" role="menu">
-              <li
-                className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+          <div className="absolute right-0 mt-[1px] w-36 rounded-[18px] shadow-lg bg-[#3F8CFF] ring-1 ring-black ring-opacity-5">
+            <div className="py-1" role="menu">
+              <Link
+                to="/edit" // Link to the edit page
+                className="flex items-center px-4 py-1 text-[13px] h-5 text-white"
                 role="menuitem"
               >
-                Edit
-              </li>
-              <li
-                className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                <IoPencil />
+                <span className="ml-2">Edit</span>
+              </Link>
+              <Link
+                to="/view" // Link to the view page
+                className="flex items-center px-4 py-1 text-[13px] h-5 text-white"
                 role="menuitem"
               >
-                View
-              </li>
-              <li
-                className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                <IoEyeOutline />
+                <span className="ml-2">View</span>
+              </Link>
+              <Link
+                to="/add" // Link to the add page
+                className="flex items-center px-4 py-1 text-[13px] h-5 text-white"
                 role="menuitem"
               >
-                Add
-              </li>
-              <li
-                className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                <GoPlus />
+                <span className="ml-2">Add</span>
+              </Link>
+              <Link
+                to="/delete" // Link to the delete page
+                className="flex items-center px-4 py-1 text-[13px] h-7 text-white"
                 role="menuitem"
               >
-                Delete
-              </li>
-            </ul>
+                <MdDelete />
+                <span className="ml-2">Delete</span>
+              </Link>
+            </div>
           </div>
         )}
       </div>

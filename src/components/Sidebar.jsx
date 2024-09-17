@@ -16,7 +16,7 @@ function Sidebar() {
         <div>
           <div className="bg-[#3F8CFF] w-11 rounded-[8px] ">
             <Link to={"/"}>
-              <img src="mprw logo-01 1.png" alt="Logo" />
+              <img src="logo.png" alt="Logo" />
             </Link>
           </div>
 

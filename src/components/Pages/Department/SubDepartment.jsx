@@ -8,18 +8,21 @@ const departments = [
     name: "R&D Department",
     depart: "Position",
     image: "image8.png",
+    url: "/RDPosition",
   },
   {
     id: 2,
     name: "R&D Department",
     depart: "Profile  ",
     image: "image4.png",
+    url: "/RDprofile",
   },
   {
     id: 3,
     name: "R&D Department",
     depart: "Employee",
     image: "image7.png",
+    url: "/RDemployee",
   },
 ];
 
@@ -27,9 +30,11 @@ function SubDepartment() {
   const navigate = useNavigate();
   const [activeCardId, setActiveCardId] = useState(null);
 
-  const handleClick = (id) => {
+  const handleClick = (id, url) => {
     setActiveCardId(id);
-    navigate("/RDPosition");
+    if (url) {
+      navigate(url);
+    }
   };
 
   return (
@@ -43,6 +48,7 @@ function SubDepartment() {
           depart={department.depart}
           buttonText="1 Member"
           onClick={handleClick}
+          url={department.url}
         />
       ))}
     </div>

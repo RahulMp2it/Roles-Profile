@@ -1,68 +1,67 @@
 import React from "react";
-import RDProfleCard from "../../../subUtils/RDProfleCard";
+import RDEmployeeCard from "../../../subUtils/RDEmployeeCard";
 
-const rdProfiles = [
+const rdEmployees = [
   {
     id: 1,
-    name: "UI/UX Designer",
+    name: "Rahul Singh",
     image: "image2.png",
-    // url: "/RDProfile",
   },
   {
     id: 2,
-    name: "Writer",
+    name: "Jatin Gautam",
     image: "image2.png",
   },
   {
     id: 3,
-    name: "Researcher",
+    name: "Piyush Tomar",
     image: "image2.png",
   },
   {
     id: 4,
-    name: "Research Executive",
+    name: "Harshita Tomar",
     image: "image2.png",
   },
   {
     id: 5,
-    name: "Full Stack Developer",
+    name: "Saurabh Dev",
     image: "image2.png",
   },
   {
     id: 6,
-    name: "Mern Stack Developer",
+    name: "Chandrsekhar Jadon",
     image: "image2.png",
   },
   {
     id: 7,
-    name: "Graphic Designer",
+    name: "Dheeraj Kumar",
     image: "image2.png",
   },
   {
     id: 8,
-    name: "Front-End Developer",
+    name: "Kalyan Singh",
     image: "image2.png",
   },
   {
     id: 9,
-    name: "Back-End Developer",
+    name: "Sachin Sharma",
     image: "image2.png",
   },
   {
     id: 10,
-    name: "pythan Developer",
+    name: "Mayank Chaturvedi",
     image: "image2.png",
   },
 ];
 
-function RDprofile() {
+function RDemployee() {
   return (
     <div className="max-w-[1400px] mt-3 px-24 py-8 mx-auto grid lg:grid-cols-4 rounded-[20px] gap-24 bg-white">
-      {rdProfiles.map((rdProfile) => (
-        <RDProfleCard
-          key={rdProfile.id}
-          image={rdProfile.image}
-          title={rdProfile.name}
+      {rdEmployees.map((rdEmployee) => (
+        <RDEmployeeCard
+          key={rdEmployee.id}
+          image={rdEmployee.image}
+          title={rdEmployee.name}
           buttonText="1 Member"
         />
       ))}
@@ -70,4 +69,4 @@ function RDprofile() {
   );
 }
 
-export default RDprofile;
+export default RDemployee;

@@ -6,7 +6,7 @@ const positions = [
     id: 1,
     name: "Team Leader",
     image: "image5.png",
-    url: "/RDposition",
+    // url: "/RDposition",
   },
   {
     id: 2,
