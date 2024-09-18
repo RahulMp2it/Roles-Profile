@@ -1,18 +1,20 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { IoPencil } from "react-icons/io5";
 import { IoEyeOutline } from "react-icons/io5";
 import { GoPlus } from "react-icons/go";
 import { MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-function EmployeesCard({ image, depart, position, title, fname }) {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  // Toggle dropdown visibility
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
+function EmployeesCard({
+  id,
+  image,
+  depart,
+  position,
+  title,
+  fname,
+  isDropdownOpen,
+  toggleDropdown,
+}) {
   return (
     <div className="bg-[#F4F9FD] rounded-[22px] overflow-hidden flex flex-col items-center justify-center pt-6 pb-5 relative">
       {/* Checkbox - Top Left Corner */}
@@ -26,7 +28,7 @@ function EmployeesCard({ image, depart, position, title, fname }) {
       {/* Dropdown Icon */}
       <div className="absolute top-2 right-3 z-10">
         <button
-          onClick={toggleDropdown}
+          onClick={() => toggleDropdown(id)} // Toggle dropdown based on this card's ID
           className="focus:outline-none text-gray-600"
         >
           <img
@@ -42,7 +44,7 @@ function EmployeesCard({ image, depart, position, title, fname }) {
             <div className="py-1" role="menu">
               <Link
                 to="/edit" // Link to the edit page
-                className="flex items-center px-4 py-1 text-[13px] h-5 text-white"
+                className="flex items-center px-4 py-3 text-[14px] h-5 text-white"
                 role="menuitem"
               >
                 <IoPencil />
@@ -50,7 +52,7 @@ function EmployeesCard({ image, depart, position, title, fname }) {
               </Link>
               <Link
                 to="/view" // Link to the view page
-                className="flex items-center px-4 py-1 text-[13px] h-5 text-white"
+                className="flex items-center px-4 py-3 text-[14px] h-5 text-white"
                 role="menuitem"
               >
                 <IoEyeOutline />
@@ -58,7 +60,7 @@ function EmployeesCard({ image, depart, position, title, fname }) {
               </Link>
               <Link
                 to="/add" // Link to the add page
-                className="flex items-center px-4 py-1 text-[13px] h-5 text-white"
+                className="flex items-center px-4 py-3 text-[14px] h-5 text-white"
                 role="menuitem"
               >
                 <GoPlus />
@@ -66,7 +68,7 @@ function EmployeesCard({ image, depart, position, title, fname }) {
               </Link>
               <Link
                 to="/delete" // Link to the delete page
-                className="flex items-center px-4 py-1 text-[13px] h-7 text-white"
+                className="flex items-center px-4 py-3 text-[14px] h-7 text-white"
                 role="menuitem"
               >
                 <MdDelete />

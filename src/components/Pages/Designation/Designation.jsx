@@ -6,31 +6,37 @@ const designations = [
     id: 1,
     name: "Team Leader",
     image: "image.png",
+    url: "/designationRDdepart",
   },
   {
     id: 2,
     name: "Head",
     image: "image1.png",
+    url: "/designationRDdepart",
   },
   {
     id: 3,
     name: "Executive",
     image: "image7.png",
+    url: "/designationRDdepart",
   },
   {
     id: 4,
     name: "Director",
     image: "image3.png",
+    url: "/designationRDdepart",
   },
   {
     id: 5,
     name: "CEO",
     image: "image4.png",
+    url: "/designationRDdepart",
   },
   {
     id: 6,
     name: "Clarical Executive",
     image: "image5.png",
+    url: "/designationRDdepart",
   },
 ];
 
@@ -43,6 +49,7 @@ function Designation() {
           image={designation.image}
           title={designation.name}
           buttonText="1 Member"
+          url={designation.url}
         />
       ))}
     </div>

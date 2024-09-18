@@ -1,6 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-function DesignationCard({ image, title, buttonText }) {
+function DesignationCard({ image, title, buttonText, url }) {
+  const Navigate = useNavigate();
+
+  const handleClick = (u) => {
+    Navigate(u);
+  };
+
   return (
     <>
       <div className="bg-[#F4F9FD] rounded-[22px] overflow-hidden flex flex-col items-center justify-center pt-6 pb-2">
@@ -17,7 +24,10 @@ function DesignationCard({ image, title, buttonText }) {
           {title}
         </h2>
         <div className="p-4 text-center">
-          <button className="inline-flex items-center border  border-[#8f97a3] px-4 py-1 text-[11px] font-nunito  text-[#7D8592] bg-[#F4F9FD] rounded-[3.5px] focus:outline-none">
+          <button
+            onClick={() => handleClick(url)}
+            className="inline-flex items-center border  border-[#8f97a3] px-4 py-1 text-[11px] font-nunito  text-[#7D8592] bg-[#F4F9FD] rounded-[3.5px] focus:outline-none"
+          >
             {buttonText}
           </button>
         </div>

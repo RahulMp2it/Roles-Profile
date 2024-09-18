@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import EmployeesCard from "../../../utils/EmployeesCard";
 
 const employees = [
@@ -85,16 +85,26 @@ const employees = [
 ];
 
 function Employees() {
+  const [openDropdownId, setIsDropdownOpen] = useState(null);
+
+  const toggleDropdown = (id) => {
+    // If the clicked dropdown is already open, close it. Otherwise, open the clicked one.
+    setIsDropdownOpen(openDropdownId === id ? null : id);
+  };
+
   return (
     <div className="max-w-[1400px] mt-3 px-24 py-8 mx-auto grid lg:grid-cols-4 rounded-[20px] gap-24 bg-white">
       {employees.map((employee) => (
         <EmployeesCard
           key={employee.id}
+          id={employee.id} //pass unique ID
           image={employee.image}
           fname={employee.fname}
           title={employee.name}
           depart={employee.depart}
           position={employee.position}
+          isDropdownOpen={openDropdownId === employee.id} // Check if this dropdown is open
+          toggleDropdown={toggleDropdown} // Pass the function to toggle the dropdown
         />
       ))}
     </div>
