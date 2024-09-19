@@ -12,10 +12,12 @@ export default {
       },
       backgroundImage: {
         'progress-img': 'url("progress.png")',
+        'login-p-img' : 'url("Login-Page-img.png")',
       },
       boxShadow: {
         'custom-blue': '0px 4px 14px 0px #3F8CFF63', 
       },
+      
     },
   },
   plugins: [

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { BsCalendar2Fill } from "react-icons/bs";
 import { FaUserFriends } from "react-icons/fa";
 import { RxDashboard } from "react-icons/rx";
@@ -21,12 +21,20 @@ function Sidebar() {
           </div>
 
           <div className="text-[#7D8592] text-[14px] tracking-[0.5px] font-nunito m-0 pt-2">
-            <Link to={"/Employees"}>
-              <div className="flex py-3 px-2 rounded transition duration-200 hover:bg-[#F4F9FD] items-center gap-x-4">
-                <FaUserFriends className="size-5" />
-                <span>Employees</span>
-              </div>
-            </Link>
+            <NavLink
+              to={"/Employees"}
+              className={({ isActive }) =>
+                isActive
+                  ? "flex py-3 px-2 rounded transition duration-200 items-center gap-x-4 bg-[#F4F9FD] text-[#3F8CFF]"
+                  : "flex py-3 px-2 rounded transition duration-200 items-center gap-x-4 text-[#7D8592]"
+              }
+            >
+              <FaUserFriends
+                className={`{({ isActive }) => (isActive ? "text-[#3F8CFF]" : "text-[#7D8592]")}`}
+                size={20}
+              />
+              <span>Employees</span>
+            </NavLink>
             <Link to={"/profile"}>
               <div className="flex py-3 px-2 rounded transition duration-200 hover:bg-[#F4F9FD] items-center gap-x-4">
                 <BsCalendar2Fill className="size-4" />

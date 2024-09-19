@@ -13,6 +13,10 @@ import RDprofile from "./components/Pages/Department/RDprofile";
 import RDemployee from "./components/Pages/Department/RDemployee";
 import DesignationRDdepart from "./components/Pages/Designation/DesignationRDdepart";
 import { FaArrowLeftLong } from "react-icons/fa6";
+import DesignationEmployee from "./components/Pages/Designation/DesignationEmployee";
+import DesignationPosition from "./components/Pages/Designation/DesignationPosition";
+import DesignationProfile from "./components/Pages/Designation/DesignationProfile";
+import LoginPage from "./components/Pages/LoginPage/LoginPage";
 
 function App() {
   const [heading, setHeading] = useState("Department");
@@ -63,6 +67,24 @@ function App() {
         setHeading("Designation/Designation R&D Department");
         setIsSubPage(true);
         break;
+      case "/designationEmployee":
+        setHeading(
+          "Designation/Designation R&D Department/Employee Designation Department"
+        );
+        setIsSubPage(true);
+        break;
+      case "/designationProfile":
+        setHeading(
+          "Designation/Designation R&D Department/Profile Designation Department"
+        );
+        setIsSubPage(true);
+        break;
+      case "/designationPosition":
+        setHeading(
+          "Designation/Designation R&D Department/Position Designation Department"
+        );
+        setIsSubPage(true);
+        break;
       default:
         setHeading("Department");
         setIsSubPage(false);
@@ -93,17 +115,19 @@ function App() {
               "Welcome back, Rahul singh"
             )}
           </p>
-          <div className="grid grid-cols-2 place-content-between gap-4">
-            <div>
+          <div className="grid grid-cols-4 place-content-between gap-4">
+            <div className="col-span-3 ">
               <h1 className="text-[34px] font-nunito font-semibold">
                 {heading}
               </h1>
             </div>
-            <div className=" text-end">
-              <button className=" text-white font-nunito w-[200px] px-2 py-3 bg-[#3F8CFF] rounded-xl">
-                {"+ Add  " + heading}
-              </button>
-            </div>
+            {!isSubPage && (
+              <div className=" text-end">
+                <button className=" text-white font-nunito w-[200px] px-2 py-3 bg-[#3F8CFF] rounded-xl">
+                  {"+ Add  " + heading}
+                </button>
+              </div>
+            )}
           </div>
           {/* <Department /> */}
           <Routes>
@@ -120,6 +144,18 @@ function App() {
             <Route
               path="/designationRDdepart"
               element={<DesignationRDdepart />}
+            />
+            <Route
+              path="/designationPosition"
+              element={<DesignationPosition />}
+            />
+            <Route
+              path="/designationProfile"
+              element={<DesignationProfile />}
+            />
+            <Route
+              path="/designationEmployee"
+              element={<DesignationEmployee />}
             />
           </Routes>
         </div>

@@ -8,21 +8,21 @@ const dRDdeparts = [
     name: "Position Department",
     depart: "(R&D)",
     image: "image2.png",
-    url: "/DesignationRDposition",
+    url: "/designationPosition",
   },
   {
     id: 2,
     name: "Position Profile",
     depart: "(R&D)",
     image: "image1.png",
-    url: "/DesignationRDprofile",
+    url: "/designationProfile",
   },
   {
     id: 3,
     name: "Position Employee",
     depart: "(R&D)",
     image: "image3.png",
-    url: "/DesignationRDemployee",
+    url: "/designationEmployee",
   },
 ];
 
